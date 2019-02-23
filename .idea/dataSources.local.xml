@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails ascension: test" uuid="5e4ee1c2-47f1-4893-ae47-0422ce034968">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>rails_dev</user-name>
+    </data-source>
+    <data-source name="Rails ascension: development" uuid="64484c65-83cb-469b-8de3-a850c9fee961">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>rails_dev</user-name>
+    </data-source>
+    <data-source name="Rails ascension: production" uuid="1643e1dc-982d-4543-bb02-60f9647d8867">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" exact-version="0" />
+      <user-name>ascension</user-name>
+    </data-source>
+  </component>
+</project>
