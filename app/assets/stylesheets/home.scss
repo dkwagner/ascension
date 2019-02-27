@@ -1,3 +1,10 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+.nav-bar{
+  background-color: $nav-bar-color;
+  text-align: center;
+}
+
+.nav-bar__button{
+
+}
