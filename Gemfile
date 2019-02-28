@@ -67,3 +67,6 @@ gem 'bootstrap'
 gem 'jquery-rails'
 
 gem 'devise'
+
+# Fixes NVD vulnerability CVE-2018-1000201
+gem 'ffi', '>= 1.9.24'
