@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_043932) do
+ActiveRecord::Schema.define(version: 2019_03_01_024923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 2019_02_28_043932) do
   create_table "pools", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pool_name"
+    t.integer "width_ft"
+    t.integer "width_in"
+    t.integer "length_ft"
+    t.integer "length_in"
+    t.integer "depth_shallow_ft"
+    t.integer "depth_shallow_in"
+    t.integer "depth_deep_ft"
+    t.integer "depth_deep_in"
   end
 
   create_table "users", force: :cascade do |t|

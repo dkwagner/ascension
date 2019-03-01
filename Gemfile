@@ -70,3 +70,6 @@ gem 'devise'
 
 # Fixes NVD vulnerability CVE-2018-1000201
 gem 'ffi', '>= 1.9.24'
+
+# AWS requires this
+gem 'aws-sdk-s3', require: false
