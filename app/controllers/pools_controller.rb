@@ -1,5 +1,6 @@
 class PoolsController < ApplicationController
   before_action :set_pool, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!
 
   # GET /pools
   # GET /pools.json
@@ -28,11 +29,11 @@ class PoolsController < ApplicationController
 
     respond_to do |format|
       if @pool.save
-        format.html { redirect_to @pool, notice: 'Pool was successfully created.' }
-        format.json { render :show, status: :created, location: @pool }
+        format.html {redirect_to @pool, notice: 'Pool was successfully created.'}
+        format.json {render :show, status: :created, location: @pool}
       else
-        format.html { render :new }
-        format.json { render json: @pool.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @pool.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -42,11 +43,11 @@ class PoolsController < ApplicationController
   def update
     respond_to do |format|
       if @pool.update(pool_params)
-        format.html { redirect_to @pool, notice: 'Pool was successfully updated.' }
-        format.json { render :show, status: :ok, location: @pool }
+        format.html {redirect_to @pool, notice: 'Pool was successfully updated.'}
+        format.json {render :show, status: :ok, location: @pool}
       else
-        format.html { render :edit }
-        format.json { render json: @pool.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @pool.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -56,19 +57,31 @@ class PoolsController < ApplicationController
   def destroy
     @pool.destroy
     respond_to do |format|
-      format.html { redirect_to pools_url, notice: 'Pool was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to pools_url, notice: 'Pool was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pool
-      @pool = Pool.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pool_params
-      params.fetch(:pool, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pool
+    @pool = Pool.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pool_params
+    params.require(:pool).permit(:pool_name,
+                                 :width_ft,
+                                 :width_in,
+                                 :length_ft,
+                                 :length_in,
+                                 :depth_shallow_ft,
+                                 :depth_shallow_in,
+                                 :depth_deep_ft,
+                                 :depth_deep_in,
+                                 :design,
+                                 :icon,
+                                 images: [])
+  end
 end

@@ -1,4 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_pool_path(@pool) %> |
-<%= link_to 'Back', pools_path %>
+  <h1><%= @pool.pool_name %></h1>
+  <h2>Dimensions</h2>
+  <h4>Width: <%= @pool.width_ft %> ft <%= @pool.width_in %> in </h4>
+  <h4>Length: <%= @pool.length_ft %> ft <%= @pool.length_in %> in </h4>
+  <h4>Depth (Deep End): <%= @pool.depth_deep_ft %> ft <%= @pool.depth_deep_in %> in </h4>
+  <h4>Depth (Shallow End): <%= @pool.depth_shallow_ft %> ft <%= @pool.depth_shallow_in %> in </h4>
+  <h3>Design: </h3>
+  <% if @pool.design.attached? %>
+    <%= image_tag url_for(@pool.design) %>
+  <% else %>
+    No design attached! Consider adding one via edit!
+  <% end %>
+  <h3>Icon: </h3>
+  <% if @pool.icon.attached? %>
+    <%= image_tag url_for(@pool.icon) %>
+  <% else %>
+    No icon attached! Consider adding one via edit!
+  <% end %>
+  <h3>Images: </h3>
+  <% if @pool.images.attached? %>
+    <% @pool.images.each do |image| %>
+      <%= image_tag url_for(image) %>
+    <% end %>=
+  <% else %>
+    No images attached! Consider adding some via edit!
+  <% end %>
+
+  <br/>
+  <%= link_to 'Edit', edit_pool_path(@pool) %> |
+  <%= link_to 'Back', pools_path %>
+</div>
+

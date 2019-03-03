@@ -1,17 +1,50 @@
-<%= form_with(model: pool, local: true) do |form| %>
-  <% if pool.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(pool.errors.count, "error") %> prohibited this pool from being saved:</h2>
-
-      <ul>
-      <% pool.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
+<%= simple_form_for @pool, html: {multipart: true} do |f| %>
+  <div class="form-group">
+    <%= f.input :pool_name, label: "Pool Model" %>
   </div>
+  <div class="form-group">
+    <div class="form-row">
+      <div class="col-6">
+        <%= f.input :width_ft, label: "Width", placeholder: "Feet" %>
+      </div>
+      <div class="col-6">
+        <%= f.input :width_in, label: "", placeholder: "Inches"%>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-6">
+        <%= f.input :length_ft, label: "Length", placeholder: "Feet" %>
+      </div>
+      <div class="col-6">
+        <%= f.input :length_in, label: "", placeholder: "Inches"%>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-6">
+        <%= f.input :depth_deep_ft, label: "Depth (Deep End)", placeholder: "Feet" %>
+      </div>
+      <div class="col-6">
+        <%= f.input :depth_deep_in, label: "", placeholder: "Inches"%>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-6">
+        <%= f.input :depth_shallow_ft, label: "Depth (Shallow End)", placeholder: "Feet" %>
+      </div>
+      <div class="col-6">
+        <%= f.input :depth_shallow_in, label: "", placeholder: "Inches"%>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.input :design, as: :file, label: "Pool Layout", direct_upload: true %>
+  </div>
+  <div class="form-group">
+    <%= f.input :icon, as: :file, label: "Pool Icon", direct_upload: true %>
+  </div>
+  <div class="form-group">
+    <%= f.input :images, as: :file, label: "Pool Images", input_html: {multiple: true}, direct_upload: true %>
+  </div>
+
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
