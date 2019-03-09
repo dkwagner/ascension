@@ -8,7 +8,7 @@
       <ObjectId>16506</ObjectId>
       <StateNumber>584</StateNumber>
       <Owner>rails_dev</Owner>
-      <IntrospectionStateNumber>620</IntrospectionStateNumber>
+      <IntrospectionStateNumber>718</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16508|16510|1
@@ -103,7 +103,7 @@ sequence|table|16544|16546|1
       <Comment>standard public schema</Comment>
       <StateNumber>351</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>621</IntrospectionStateNumber>
+      <IntrospectionStateNumber>719</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -213,7 +213,7 @@ sequence|table|16544|16546|1
     <table id="32" parent="17" name="pools">
       <ObjectId>16535</ObjectId>
       <Owner>rails_dev</Owner>
-      <StateNumber>591</StateNumber>
+      <StateNumber>717</StateNumber>
     </table>
     <table id="33" parent="17" name="schema_migrations">
       <ObjectId>16564</ObjectId>
@@ -495,40 +495,46 @@ blob_id</ColNames>
       <StateNumber>591</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="75" parent="32" name="pools_pkey">
+    <column id="75" parent="32" name="featured">
+      <Position>13</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>717</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="76" parent="32" name="pools_pkey">
       <ObjectId>16542</ObjectId>
       <StateNumber>591</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="76" parent="32" name="pools_pkey">
+    <key id="77" parent="32" name="pools_pkey">
       <ObjectId>16543</ObjectId>
       <StateNumber>591</StateNumber>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pools_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="77" parent="33" name="version">
+    <column id="78" parent="33" name="version">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>596</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="78" parent="33" name="schema_migrations_pkey">
+    <index id="79" parent="33" name="schema_migrations_pkey">
       <ObjectId>16570</ObjectId>
       <StateNumber>596</StateNumber>
       <ColNames>version</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="79" parent="33" name="schema_migrations_pkey">
+    <key id="80" parent="33" name="schema_migrations_pkey">
       <ObjectId>16571</ObjectId>
       <StateNumber>596</StateNumber>
       <ColNames>version</ColNames>
       <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="80" parent="34" name="id">
+    <column id="81" parent="34" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -536,7 +542,7 @@ blob_id</ColNames>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="81" parent="34" name="email">
+    <column id="82" parent="34" name="email">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
@@ -544,7 +550,7 @@ blob_id</ColNames>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
-    <column id="82" parent="34" name="encrypted_password">
+    <column id="83" parent="34" name="encrypted_password">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
@@ -552,57 +558,57 @@ blob_id</ColNames>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
-    <column id="83" parent="34" name="reset_password_token">
+    <column id="84" parent="34" name="reset_password_token">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>592</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="84" parent="34" name="reset_password_sent_at">
+    <column id="85" parent="34" name="reset_password_sent_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>592</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="85" parent="34" name="remember_created_at">
+    <column id="86" parent="34" name="remember_created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>592</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="86" parent="34" name="created_at">
+    <column id="87" parent="34" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>592</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="87" parent="34" name="updated_at">
+    <column id="88" parent="34" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>592</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="88" parent="34" name="users_pkey">
+    <index id="89" parent="34" name="users_pkey">
       <ObjectId>16555</ObjectId>
       <StateNumber>592</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="89" parent="34" name="index_users_on_email">
+    <index id="90" parent="34" name="index_users_on_email">
       <ObjectId>16557</ObjectId>
       <StateNumber>593</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="90" parent="34" name="index_users_on_reset_password_token">
+    <index id="91" parent="34" name="index_users_on_reset_password_token">
       <ObjectId>16558</ObjectId>
       <StateNumber>594</StateNumber>
       <ColNames>reset_password_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="91" parent="34" name="users_pkey">
+    <key id="92" parent="34" name="users_pkey">
       <ObjectId>16556</ObjectId>
       <StateNumber>592</StateNumber>
       <ColNames>id</ColNames>

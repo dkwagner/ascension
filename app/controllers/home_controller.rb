@@ -9,4 +9,9 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def pool_list
+    @featuredPools = Pool.where(:featured => true)
+    @nonFeaturedPools = Pool.where(:featured => false)
+  end
+
 end

@@ -80,6 +80,7 @@ class PoolsController < ApplicationController
                                  :depth_shallow_in,
                                  :depth_deep_ft,
                                  :depth_deep_in,
+                                 :featured,
                                  :design,
                                  :icon,
                                  images: [])
