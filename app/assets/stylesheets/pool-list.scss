@@ -1,0 +1,64 @@
+@import 'colors';
+
+.featured-pool-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.featured-pool-img{
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.featured-pool-card{
+  height: 400px;
+}
+
+.featured-pool-title{
+  font-size: 3em;
+  margin-bottom: 1rem;
+}
+
+.featured-pool-title:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 75%;
+  border-bottom: 10px solid $color-primary-0;
+}
+
+.pool-list-title{
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.pool-list-title:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 50%;
+  border-bottom: 10px solid $color-primary-0;
+}
+
+.pool-list-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+
+.pool-list-item{
+  font-size: 1.5em;
+  margin: 0.5em;
+  transition: background-color 0.5s;
+}
+
+.pool-list-item:hover{
+  background-color: $nav-bar-color;
+  transition: background-color 0.5s;
+}

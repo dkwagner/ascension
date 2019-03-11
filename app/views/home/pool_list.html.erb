@@ -1,4 +1,40 @@
-<div class="container-fluid">
-  <% @pools.each do |pool| %>
+<div class="row">
+  <div class="col">
+    <div class="featured-pool-title text-center">
+      Featured Pools
+    </div>
+  </div>
+</div>
+<div class="row">
+  <% @featuredPools.each do |pool| %>
+    <div class="col-md-4 col-sm-6">
+      <div class="card text-center featured-pool-card">
+        <div class="card-header">
+          <%= pool.pool_name %>
+        </div>
+        <%= image_tag url_for(pool.design), class: "card-img-top featured-pool-img" %>
+      </div>
+    </div>
   <% end %>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="pool-list-title text-center">
+      All Pool Models
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="pool-list-container">
+    <% @pools.each do |pool| %>
+      <%= link_to pool_path(pool) do %>
+        <div class="pool-list-item">
+          <div class="pool-list-name text-center">
+            <%= pool.pool_name %>
+          </div>
+          <%= image_tag url_for(pool.icon), class: "pool-list-item" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>

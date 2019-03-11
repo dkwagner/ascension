@@ -1,28 +1,16 @@
-<div class="row nav-bar">
-  <div class="col-sm-12 col-md-3">
-    <a href="/" class="nav-bar__home-link">
-      <%= image_tag "logo", class: "nav-bar__logo"%>
-    </a>
-  </div>
-  <div class="col-sm-12 col-md-3">
-    <a href="/pool_models" class="nav-bar__link">
-      <div class="nav-bar__button">
-        Pool Models
-      </div>
-    </a>
-  </div>
-  <div class="col-sm-12 col-md-3">
-    <a href="#" class="nav-bar__link">
-      <div class="nav-bar__button">
-        About Us
-      </div>
-    </a>
-  </div>
-  <div class="col-sm-12 col-md-3">
-    <a href="#" class="nav-bar__link">
-      <div class="nav-bar__button">
-        Contact Us
-      </div>
-    </a>
+<div class="navbar navbar-expand-sm navbar-light">
+  <a class="navbar-brand" href="/">
+    <%= image_tag 'logo.svg', class: 'navbar__logo' %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-content">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="collapse-content">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/">Home</a>
+      <a class="nav-item nav-link" href="/pool_models">Pool Models</a>
+      <a class="nav-item nav-link" href="/contact_us">Contact Us</a>
+    </div>
   </div>
 </div>

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :pools
-  devise_for :users
+  if Rails.env.development?
+    resources :pools
+    devise_for :users
+  end
 
   root 'home#index'
 

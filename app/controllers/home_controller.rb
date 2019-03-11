@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
   def pool_list
     @featuredPools = Pool.where(:featured => true)
-    @nonFeaturedPools = Pool.where(:featured => false)
+    @pools = Pool.all
   end
 
 end
