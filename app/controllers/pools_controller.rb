@@ -82,6 +82,7 @@ class PoolsController < ApplicationController
                                  :depth_deep_in,
                                  :featured,
                                  :description,
+                                 :in_stock,
                                  :design,
                                  :icon,
                                  images: [])

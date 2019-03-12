@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
   def pool_list
     @featuredPools = Pool.where(:featured => true)
-    @pools = Pool.all
+    @pools = Pool.order(:id)
   end
 
 end

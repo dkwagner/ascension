@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col">
-    <div class="featured-pool-title text-center">
+    <div class="title-underlined-lg text-center">
       Featured Pools
     </div>
   </div>
@@ -19,7 +19,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <div class="pool-list-title text-center">
+    <div class="title-underlined-md text-center">
       All Pool Models
     </div>
   </div>
@@ -33,6 +33,11 @@
             <%= pool.pool_name %>
           </div>
           <%= image_tag url_for(pool.icon), class: "pool-list-item" %>
+          <div class="pool-list-in-stock text-center">
+            <% if pool.in_stock? %>
+              (In Stock)
+            <% end %>
+          </div>
         </div>
       <% end %>
     <% end %>

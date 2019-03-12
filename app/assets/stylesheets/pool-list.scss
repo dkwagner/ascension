@@ -17,34 +17,6 @@
   height: 400px;
 }
 
-.featured-pool-title{
-  font-size: 3em;
-  margin-bottom: 1rem;
-}
-
-.featured-pool-title:after{
-  content: "";
-  display: block;
-  margin: 0 auto;
-  padding-top: 20px;
-  width: 75%;
-  border-bottom: 10px solid $color-primary-0;
-}
-
-.pool-list-title{
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-.pool-list-title:after{
-  content: "";
-  display: block;
-  margin: 0 auto;
-  padding-top: 20px;
-  width: 50%;
-  border-bottom: 10px solid $color-primary-0;
-}
-
 .pool-list-container{
   display: flex;
   flex-flow: row wrap;
@@ -53,12 +25,21 @@
 }
 
 .pool-list-item{
-  font-size: 1.5em;
   margin: 0.5em;
-  transition: background-color 0.5s;
+  color: $color-primary-0;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .pool-list-item:hover{
   background-color: $nav-bar-color;
-  transition: background-color 0.5s;
+  color: $white-color;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pool-list-name{
+  font-size: 1.5em;
+}
+
+.pool-list-in-stock{
+  font-size: 0.75em;
 }

@@ -26,3 +26,35 @@ a:hover{
   text-decoration: none;
   background-color: inherit;
 }
+
+.title-underlined-lg{
+  font-size: 3em;
+  margin-bottom: 1rem;
+}
+
+.title-underlined-lg:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 75%;
+  border-bottom: 10px solid $color-primary-0;
+}
+
+.title-underlined-md{
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.title-underlined-md:after{
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 50%;
+  border-bottom: 10px solid $color-primary-0;
+}
+
+.description-lg{
+  font-size: 1.5em;
+}

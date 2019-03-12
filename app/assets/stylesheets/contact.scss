@@ -1,0 +1,17 @@
+@import "colors";
+
+.contact-info{
+  max-width: 300px;
+  margin: 1em auto;
+  background-color: $color-primary-0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: 4px outset $nav-bar-color;
+  border-radius: 5px;
+}
+
+.contact-info-item{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: $white-color;
+}

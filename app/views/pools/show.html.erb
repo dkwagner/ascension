@@ -9,6 +9,7 @@
   <h4>Depth (Shallow End): <%= @pool.depth_shallow_ft %> ft <%= @pool.depth_shallow_in %> in </h4>
   <h4>Description: <%= @pool.description %></h4>
   <h4>Featured: <%= @pool.featured %></h4>
+  <h4>In Stock: <%= @pool.in_stock %></h4>
   <h3>Design: </h3>
   <% if @pool.design.attached? %>
     <%= image_tag url_for(@pool.design) %>
