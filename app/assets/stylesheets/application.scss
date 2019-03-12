@@ -35,10 +35,12 @@ a:hover{
 .title-underlined-lg:after{
   content: "";
   display: block;
-  margin: 0 auto;
-  padding-top: 20px;
+  margin: 20px auto;
   width: 75%;
-  border-bottom: 10px solid $color-primary-0;
+  border-bottom: 5px solid $color-primary-0;
+  border-top: 5px solid $color-primary-0;
+  padding: 0px;
+  border-radius: 5px;
 }
 
 .title-underlined-md{
@@ -49,10 +51,12 @@ a:hover{
 .title-underlined-md:after{
   content: "";
   display: block;
-  margin: 0 auto;
-  padding-top: 20px;
+  margin: 20px auto;
   width: 50%;
-  border-bottom: 10px solid $color-primary-0;
+  border-bottom: 5px solid $color-primary-0;
+  border-top: 5px solid $color-primary-0;
+  padding: 0px;
+  border-radius: 5px;
 }
 
 .description-lg{
