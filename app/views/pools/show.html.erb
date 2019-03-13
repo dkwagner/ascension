@@ -1,38 +1,87 @@
-<div class="container-fluid">
-  <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-  <h1><%= @pool.pool_name %></h1>
-  <h2>Dimensions</h2>
-  <h4>Width: <%= @pool.width_ft %> ft <%= @pool.width_in %> in </h4>
-  <h4>Length: <%= @pool.length_ft %> ft <%= @pool.length_in %> in </h4>
-  <h4>Depth (Deep End): <%= @pool.depth_deep_ft %> ft <%= @pool.depth_deep_in %> in </h4>
-  <h4>Depth (Shallow End): <%= @pool.depth_shallow_ft %> ft <%= @pool.depth_shallow_in %> in </h4>
-  <h4>Description: <%= @pool.description %></h4>
-  <h4>Featured: <%= @pool.featured %></h4>
-  <h4>In Stock: <%= @pool.in_stock %></h4>
-  <h3>Design: </h3>
-  <% if @pool.design.attached? %>
-    <%= image_tag url_for(@pool.design) %>
-  <% else %>
-    No design attached! Consider adding one via edit!
-  <% end %>
-  <h3>Icon: </h3>
-  <% if @pool.icon.attached? %>
-    <%= image_tag url_for(@pool.icon) %>
-  <% else %>
-    No icon attached! Consider adding one via edit!
-  <% end %>
-  <h3>Images: </h3>
-  <% if @pool.images.attached? %>
-    <% @pool.images.each do |image| %>
-      <%= image_tag url_for(image) %>
-    <% end %>
-  <% else %>
-    No images attached! Consider adding some via edit!
-  <% end %>
-
-  <br/>
-  <%= link_to 'Edit', edit_pool_path(@pool) %> |
-  <%= link_to 'Back', pools_path %>
+<div class="row">
+  <div class="col">
+    <div class="title-underlined-lg text-center">
+      <%= @pool.pool_name %>
+    </div>
+  </div>
 </div>
+<div class="row">
+  <div class="pool-design-desc-container">
+    <div class="pool-show-design-img-container">
+      <% if @pool.design.attached? %>
+        <%= image_tag url_for(@pool.design), class: "pool-show-design-img" %>
+      <% end %>
+    </div>
+    <div class="pool-show-desc">
+      <%= @pool.description %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <ul class="list-group text-center pool-specs">
+      <li class="list-group-item">Width: <%= @pool.width_ft %>' <%= @pool.width_in %>"</li>
+      <li class="list-group-item">Length: <%= @pool.length_ft %>' <%= @pool.length_in %>"</li>
+      <li class="list-group-item">Depth: <%= @pool.depth_shallow_ft %>' <%= @pool.depth_shallow_in %>"
+        - <%= @pool.depth_deep_ft %>' <%= @pool.depth_deep_in %>"
+      </li>
+      <li class="list-group-item">
+        Status:
+        <% if @pool.in_stock? %>
+          Currently In Stock
+        <% else %>
+          Special Order Only
+        <% end %>
+      </li>
+    </ul>
+    <a href="/contact_us">
+      <div class="pool-quote-button text-center">
+        Get a Quote
+      </div>
+    </a>
+  </div>
+  <div class="col-md-6">
+    <div class="pool-image">
+      <% if @pool.images.attached? %>
+        <%= image_tag url_for(@pool.images[0]), class: "img-fluid" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<h1><%= @pool.pool_name %></h1>
+<h2>Dimensions</h2>
+<h4>Width: <%= @pool.width_ft %> ft <%= @pool.width_in %> in </h4>
+<h4>Length: <%= @pool.length_ft %> ft <%= @pool.length_in %> in </h4>
+<h4>Depth (Deep End): <%= @pool.depth_deep_ft %> ft <%= @pool.depth_deep_in %> in </h4>
+<h4>Depth (Shallow End): <%= @pool.depth_shallow_ft %> ft <%= @pool.depth_shallow_in %> in </h4>
+<h4>Description: <%= @pool.description %></h4>
+<h4>Featured: <%= @pool.featured %></h4>
+<h4>In Stock: <%= @pool.in_stock %></h4>
+<h3>Design: </h3>
+<% if @pool.design.attached? %>
+  <%= image_tag url_for(@pool.design) %>
+<% else %>
+  No design attached! Consider adding one via edit!
+<% end %>
+<h3>Icon: </h3>
+<% if @pool.icon.attached? %>
+  <%= image_tag url_for(@pool.icon) %>
+<% else %>
+  No icon attached! Consider adding one via edit!
+<% end %>
+<h3>Images: </h3>
+<% if @pool.images.attached? %>
+  <% @pool.images.each do |image| %>
+    <%= image_tag url_for(image) %>
+  <% end %>
+<% else %>
+  No images attached! Consider adding some via edit!
+<% end %>
+
+<br/>
+<%= link_to 'Edit', edit_pool_path(@pool) %> |
+<%= link_to 'Back', pools_path %>
 

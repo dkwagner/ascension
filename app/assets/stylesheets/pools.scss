@@ -1,3 +1,73 @@
-// Place all the styles related to the Pools controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors";
+
+@media (min-width: 768px){
+  .pool-show-design-img-container{
+    width: 50%;
+  }
+
+  .pool-show-desc{
+    width: 50%;
+  }
+}
+
+@media (max-width: 767.98px){
+  .pool-show-design-img-container{
+    width: 100%;
+  }
+
+  .pool-show-desc{
+    width: 100%;
+  }
+}
+
+.pool-show-design-img-container{
+  padding: 1em;
+}
+
+
+.pool-show-design-img{
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.pool-design-desc-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  align-items: center;
+}
+
+.pool-show-desc{
+  padding: 1em;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.pool-specs{
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.pool-image{
+  margin: 1em;
+}
+
+.pool-quote-button{
+  font-size: 1.25em;
+  margin: 2em auto;
+  width: 65%;
+  padding: 1em;
+  border: 2px solid $nav-bar-color;
+  border-radius: 5px;
+  color: #212529;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.pool-quote-button:hover{
+  color: $white-color;
+  background-color: $nav-bar-color;
+  border: 2px solid $color-primary-0;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}

@@ -9,7 +9,7 @@
   <% @featuredPools.each do |pool| %>
     <div class="col-md-4 col-sm-6">
       <div class="card text-center featured-pool-card">
-        <div class="card-header">
+        <div class="card-header featured-pool-card-header">
           <%= pool.pool_name %>
         </div>
         <%= image_tag url_for(pool.design), class: "card-img-top featured-pool-img" %>

@@ -1,7 +1,9 @@
 @import "colors";
 
 .contact-info{
-  max-width: 300px;
+  text-decoration: none;
+  max-width: 500px;
+  font-size: 1.15em;
   margin: 1em auto;
   background-color: $color-primary-0;
   padding-top: 1em;
@@ -14,4 +16,12 @@
   margin-top: 1em;
   margin-bottom: 1em;
   color: $white-color;
+}
+
+#contact-info-email-link{
+  color: $white-color;
+}
+
+#contact-info-email-link:hover{
+  color: $nav-bar-color;
 }

@@ -18,7 +18,12 @@
 @import 'colors';
 
 body{
+  font-family: 'Spectral', 'Arial', serif;
   background-color: $background-color;
+}
+
+a{
+  outline: 0;
 }
 
 a:hover{
@@ -29,6 +34,7 @@ a:hover{
 
 .title-underlined-lg{
   font-size: 3em;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 
@@ -45,6 +51,7 @@ a:hover{
 
 .title-underlined-md{
   font-size: 2em;
+  font-weight: bold;
   margin-bottom: 1em;
 }
 
@@ -53,6 +60,24 @@ a:hover{
   display: block;
   margin: 20px auto;
   width: 50%;
+  border-bottom: 5px solid $color-primary-0;
+  border-top: 5px solid $color-primary-0;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.seperator-md{
+  margin: 20px auto;
+  width: 50%;
+  border-bottom: 5px solid $color-primary-0;
+  border-top: 5px solid $color-primary-0;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.seperator-lg{
+  margin: 20px auto;
+  width: 75%;
   border-bottom: 5px solid $color-primary-0;
   border-top: 5px solid $color-primary-0;
   padding: 0px;

@@ -17,6 +17,10 @@
   height: 400px;
 }
 
+.featured-pool-card-header{
+  font-size: 2em;
+}
+
 .pool-list-container{
   display: flex;
   flex-flow: row wrap;
@@ -42,4 +46,6 @@
 
 .pool-list-in-stock{
   font-size: 0.75em;
+  font-style: italic;
+  font-weight: bold;
 }
